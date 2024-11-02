@@ -1,3 +1,53 @@
-#heading {
-    color: red;
+.headercontainer{
+    display: flex;
+    justify-content: flex-end;
+   border: 1px solid black;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    height:min-content;
+  
+}
+.NaiveItems > ul{
+    display:flex;
+    list-style:none ;
+  
+}
+.NaiveItems > ul >li{
+    padding:20px;
+    font-size:20px;
+    margin:7px
+}
+.image{
+width:150px;
+}
+.cardContainer:hover{
+    border:1px solid black;
+    cursor: pointer; 
+}
+.cardContainer{
+    margin:7px;
+   width:150px;
+   
+   
+}
+.restrauContainer{
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmerCard{
+    margin: 10px;
+    height:400px;
+    width:200px;
+    background: color #f0f0f0;;
+}
+.shimmerContainer{
+    display: flex;
+    flex-wrap: wrap; 
+}
+.button{
+  height:20px;
+   
 }

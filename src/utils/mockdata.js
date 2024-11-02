@@ -1,7 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Body from "./src/Body";
-import Header from "./src/Header";
 const resList=[{
     "info": {
     "id": "748641",
@@ -17,7 +13,7 @@ const resList=[{
     "Desserts",
     "Beverages"
     ],
-    "avgRating": 4.4,
+    "avgRating": 4.5,
     "parentId": "4961",
     "avgRatingString": "4.4",
     "totalRatingsString": "1.2K+",
@@ -109,7 +105,7 @@ const resList=[{
     "cuisines": [
     "Pizzas"
     ],
-    "avgRating": 4.5,
+    "avgRating": 2.8,
     "parentId": "721",
     "avgRatingString": "4.5",
     "totalRatingsString": "4.5K+",
@@ -212,7 +208,7 @@ const resList=[{
     "Fast Food",
     "Rolls & Wraps"
     ],
-    "avgRating": 4.4,
+    "avgRating": 3.1,
     "parentId": "547",
     "avgRatingString": "4.4",
     "totalRatingsString": "1.3K+",
@@ -374,7 +370,7 @@ const resList=[{
     },
     {
     "info": {
-    "id": "748641",
+    "id": "348641",
     "name": "La Pino'z Pizza",
     "cloudinaryImageId": "f44bc9708c514cd2dd6ae0d8b4677214",
     "locality": "Balmatta Rd",
@@ -387,7 +383,7 @@ const resList=[{
     "Desserts",
     "Beverages"
     ],
-    "avgRating": 4.4,
+    "avgRating": 4.0,
     "parentId": "4961",
     "avgRatingString": "4.4",
     "totalRatingsString": "1.2K+",
@@ -469,7 +465,7 @@ const resList=[{
     },
     {
     "info": {
-    "id": "711016",
+    "id": "712341",
     "name": "Subway",
     "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/25/b3b40b7f-4372-49cc-b51e-21da81d8293e_711016.jpg",
     "locality": "Lalbagh",
@@ -482,7 +478,7 @@ const resList=[{
     "Desserts",
     "Beverages"
     ],
-    "avgRating": 4.2,
+    "avgRating": 4.9,
     "parentId": "2",
     "avgRatingString": "4.2",
     "totalRatingsString": "1.0K+",
@@ -564,7 +560,7 @@ const resList=[{
     },
     {
         "info": {
-        "id": "364948",
+        "id": "369248",
         "name": "LunchBox - Meals and Thalis",
         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/16/3b2df581-5919-42d0-8d8b-611b7a7866cb_364948.jpg",
         "locality": "Balmatta road",
@@ -578,7 +574,7 @@ const resList=[{
         "Desserts",
         "Beverages"
         ],
-        "avgRating": 4.4,
+        "avgRating": 3.7,
         "parentId": "4925",
         "avgRatingString": "4.4",
         "totalRatingsString": "5.8K+",
@@ -644,7 +640,7 @@ const resList=[{
         },
         {
         "info": {
-        "id": "748641",
+        "id": "714341",
         "name": "La Pino'z Pizza",
         "cloudinaryImageId": "f44bc9708c514cd2dd6ae0d8b4677214",
         "locality": "Balmatta Rd",
@@ -657,7 +653,7 @@ const resList=[{
         "Desserts",
         "Beverages"
         ],
-        "avgRating": 4.4,
+        "avgRating": 3.4,
         "parentId": "4961",
         "avgRatingString": "4.4",
         "totalRatingsString": "1.2K+",
@@ -739,7 +735,7 @@ const resList=[{
         },
         {
         "info": {
-        "id": "711016",
+        "id": "711091",
         "name": "Subway",
         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/25/b3b40b7f-4372-49cc-b51e-21da81d8293e_711016.jpg",
         "locality": "Lalbagh",
@@ -752,7 +748,7 @@ const resList=[{
         "Desserts",
         "Beverages"
         ],
-        "avgRating": 4.2,
+        "avgRating": 4.6,
         "parentId": "2",
         "avgRatingString": "4.2",
         "totalRatingsString": "1.0K+",
@@ -835,21 +831,4 @@ const resList=[{
         
         
 ]
-    
-  
-
-
-
-
-
-const FoodApp=()=>{
-     return (<div>
-        <Header/>
-        <Body/>
-     </div>
-     );
-}
- 
- 
- const root=ReactDOM.createRoot(document.getElementById("root"));
- root.render(<FoodApp/>);
+    export default resList;
