@@ -1,10 +1,11 @@
 
 import RestrauCard from "./RestrauCard";
-import resList from "./utils/mockdata";
+
 import {useState,useEffect} from "react";
-import Shimmer from "./Shimmer";
+
 const Body=()=>{ 
     const[ListOfRes,setListOfRes]=useState([]);
+    const[ModifiedRes,setModifiedRes]=useState([]);
     useEffect(()=>{
         fetchData();
     },[]);
@@ -17,7 +18,7 @@ const Body=()=>{
     const json =await data.json();
     console.log(json);
        setListOfRes(json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) ;
-       
+       setModifiedRes(json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) ;
     }
     
     return(
@@ -26,10 +27,10 @@ const Body=()=>{
            <button className="filterbtn" 
            onClick={()=>{
             const filteredList=ListOfRes.filter(
-                (res)=>res.info.avgRating >4.0
+                (res)=>res.info.avgRating >4.5
             )
-            console.log(json);
-            setListOfRes(filteredList);
+            
+            setModifiedRes(filteredList);
            }
            }>Top Rated Restaurants</button>
            <input   type="text" className="input"
@@ -39,16 +40,16 @@ const Body=()=>{
             }}>
            </input>
            <button onClick={()=>{
-             const filteredres=ListOfRes.filter((res)=>res.info.name.includes(searchtext));
-             setListOfRes(filteredres);
+             const filteredres=ListOfRes.filter((res)=>res.info.name.toLowerCase().includes(searchtext.toLowerCase()));
+             setModifiedRes(filteredres);
            }
            }>search</button>
        </div>     
-            <div className="restrauContainer">
-                {  ListOfRes?.map((restaurant)=>(
-                < RestrauCard  key={restaurant?.info?.id} resData={restaurant}/>
-                )) }
-            </div>
+        <div className="restrauContainer">
+            {ModifiedRes?.map((restaurant)=>(
+             < RestrauCard  key={restaurant?.info?.id} resData={restaurant}/>
+             )) }
+        </div>
    </div>
    )
 };
